@@ -623,10 +623,10 @@ img { display: block; max-width: 100%; }
   .grid-col-ext-cell { width: 64px; height: 64px; }
   .grid-col-ext--bottom .grid-col-ext-char { height: 111px; left: 52px; bottom: 0; }
   .grid-col-ext--bottom .grid-col-ext-img { height: 111px; }
-  .grid-col-ext--bottom .grid-col-ext-bubble { width: 12rem; }
+  .grid-col-ext--bottom .grid-col-ext-bubble { width: 10.5rem; margin-left: -2rem; margin-top: -3.4rem;}
   .grid-col-ext--top .grid-col-ext-char { height: 111px; left: -26px; bottom: 80px; }
   .grid-col-ext--top .grid-col-ext-img { height: 100px; }
-  .grid-col-ext--top .grid-col-ext-bubble { width: 10.5rem; margin-left: -16rem; }
+  .grid-col-ext--top .grid-col-ext-bubble { width: 8.8rem; margin-left: -14rem; margin-top: -1.5rem; }
   .cell-fill { border-radius: 5px; }
   .cell-img img { border-radius: 6px; }
   .bubble { left: 58px; font-size: 10px; padding: 6px 10px; }
