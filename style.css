@@ -367,7 +367,7 @@ img { display: block; max-width: 100%; }
 }
 
 .grid-col-ext--bottom .grid-col-ext-bubble {
-  width: 19rem;
+  width: 18rem;
   margin-top: 0;
 }
 
@@ -386,9 +386,9 @@ img { display: block; max-width: 100%; }
 }
 
 .grid-col-ext--top .grid-col-ext-bubble {
-  width: 11rem;
+  width: 15rem;
   margin-top: 20px;
-  margin-left: -300px;
+  margin-left: -350px;
   opacity: 1;
   transform: none;
   transition: none;
@@ -626,7 +626,7 @@ img { display: block; max-width: 100%; }
   .grid-col-ext--bottom .grid-col-ext-bubble { width: 10.5rem; margin-left: -2rem; margin-top: -3.4rem;}
   .grid-col-ext--top .grid-col-ext-char { height: 111px; left: -26px; bottom: 80px; }
   .grid-col-ext--top .grid-col-ext-img { height: 100px; }
-  .grid-col-ext--top .grid-col-ext-bubble { width: 8rem; margin-left: -14rem; margin-top: -2rem; }
+  .grid-col-ext--top .grid-col-ext-bubble { width: 8rem; max-width: 8rem; margin-left: -14rem; margin-top: -2rem; }
   .cell-fill { border-radius: 5px; }
   .cell-img img { border-radius: 6px; }
   .bubble { left: 58px; font-size: 10px; padding: 6px 10px; }
