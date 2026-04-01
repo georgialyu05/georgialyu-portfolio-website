@@ -3,12 +3,13 @@
   display: flex;
   flex-direction: column;
   gap: 6rem;
-  padding: calc(var(--nav-h) + 5rem) max(3rem, calc((100vw - 936px) / 2)) 6rem;
+  padding: calc(var(--nav-h) + 5rem) max(3rem, calc((100% - 936px) / 2)) 6rem;
   
 }
 
-.about-header {
-  margin-bottom: 3rem;
+.about-header .section-header {
+  justify-content: flex-start;
+  margin-bottom: 1rem;
 }
 
 .about-header h2 {

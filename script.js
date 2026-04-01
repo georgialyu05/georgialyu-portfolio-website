@@ -1,15 +1,4 @@
 /* ============================================================
-   HERO — animate on load
-============================================================ */
-document.querySelectorAll('.reveal').forEach((el, i) => {
-  el.style.animationFillMode = 'forwards';
-  el.style.animationDelay = `${0.1 + i * 0.1}s`;
-  el.style.animationDuration = '0.85s';
-  el.style.animationTimingFunction = 'cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-  el.style.animationName = 'fadeUp';
-});
-
-/* ============================================================
    NAV — hide on scroll down, show on scroll up
 ============================================================ */
 const nav = document.getElementById('nav');

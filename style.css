@@ -13,7 +13,6 @@
   --accent-2:    #E8A98C;
   --border:      #DDD8CF;
 
-  --ff-display: 'DM Sans', sans-serif;
   --ff-body:    'DM Sans', sans-serif;
   --ff-label:   'IBM Plex Sans Condensed', sans-serif;
 
@@ -44,15 +43,8 @@ img { display: block; max-width: 100%; }
 /* ============================================================
    UTILITIES
 ============================================================ */
-.section-label {
-  font-size: 0.8rem;
-  font-weight: 450;
-  text-transform: uppercase;
-  color: var(--text-2);
-}
-
 .section-header-label {
-  font-size: 1.0rem;
+  font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
   color: var(--text);
@@ -74,53 +66,9 @@ img { display: block; max-width: 100%; }
   margin-bottom: 2.5rem;
 }
 
-.section-line {
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  background: var(--text);
-  color: var(--bg);
-  padding: 0.65rem 1.6rem;
-  border-radius: 100px;
-  font-family: var(--ff-body);
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: background 0.25s var(--ease), transform 0.2s;
-}
-.btn-primary:hover {
-  background: var(--accent);
-  transform: translateY(-2px);
-}
-
-.btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid var(--border);
-  color: var(--text-2);
-  padding: 0.65rem 1.6rem;
-  border-radius: 100px;
-  font-size: 0.85rem;
-  font-weight: 400;
-  transition: border-color 0.25s, color 0.25s, transform 0.2s;
-}
-.btn-ghost:hover {
-  border-color: var(--text);
-  color: var(--text);
-  transform: translateY(-2px);
-}
-
 /* ============================================================
    REVEAL ANIMATIONS
 ============================================================ */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-}
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -228,7 +176,7 @@ img { display: block; max-width: 100%; }
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  padding: calc(var(--nav-h) + 5rem) max(3rem, calc((100vw - 1296px) / 2)) calc(5rem + 3 * 104px);
+  padding: calc(var(--nav-h) + 5rem) max(3rem, calc((100% - 1296px) / 2)) calc(5rem + 3 * 104px);
   position: relative;
 }
 
@@ -241,29 +189,6 @@ img { display: block; max-width: 100%; }
   border-radius: 50%;
   background: radial-gradient(circle, rgba(196, 89, 58, 0.07) 0%, transparent 65%);
   pointer-events: none;
-}
-
-.hero-left {
-  flex: 0 0 auto;
-  max-width: 380px;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-tagline {
-  font-size: 1rem;
-  color: var(--text-2);
-  line-height: 1.75;
-  font-weight: 300;
-  margin-bottom: 2.5rem;
-  animation: fadeUp 0.9s var(--ease) forwards 0.2s;
-}
-
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  animation: fadeUp 0.9s var(--ease) forwards 0.3s;
 }
 
 .hero-right {
@@ -412,7 +337,6 @@ img { display: block; max-width: 100%; }
   top: calc(-2 * 104px);
   grid-template-rows: repeat(2, 104px);
   opacity: 1;
-  border-bottom: 0px solid rgba(0,0,0,0.12);
   border-top: 1px solid rgba(0,0,0,0.12);
 }
 
@@ -490,14 +414,6 @@ img { display: block; max-width: 100%; }
   transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
 }
 
-/* ── Shared img base ── */
-.grid-col-ext-img {
-  height: 180px;
-  width: auto;
-  max-width: none;
-  display: block;
-  z-index: -99;
-}
 .grid-col-ext.active .grid-col-ext-bubble {
   opacity: 1;
   transform: scale(1) translateY(0);
@@ -506,8 +422,7 @@ img { display: block; max-width: 100%; }
 .grid-row-section {
   display: flex;
   justify-content: center;
-  padding: calc(4rem + 2 * 104px) max(3rem, calc((100vw - 936px) / 2)) 4rem;
-  margin-top: 0rem;
+  padding: calc(4rem + 2 * 104px) max(3rem, calc((100% - 936px) / 2)) 4rem;
 }
 
 .grid--row {
@@ -538,8 +453,7 @@ img { display: block; max-width: 100%; }
 }
 
 .work {
-  padding: 6rem max(3rem, calc((100vw - 936px) / 2));
-  margin-top: 0rem
+  padding: 6rem max(3rem, calc((100% - 936px) / 2));
 }
 
 .projects {
@@ -571,23 +485,6 @@ img { display: block; max-width: 100%; }
   gap: 1.2rem;
   min-height: 420px;
   position: relative;
-}
-
-.project-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.project-num {
-  font-family: var(--ff-display);
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: var(--text-3);
-}
-.project-tag {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  color: var(--text-3);
 }
 
 .project-visual {
@@ -688,39 +585,6 @@ img { display: block; max-width: 100%; }
   line-height: 1.4;
 }
 
-.project-metrics {
-  display: flex;
-  gap: 2rem;
-  padding-top: 0.25rem;
-}
-.metric-val {
-  display: block;
-  font-family: var(--ff-display);
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--accent);
-  line-height: 1;
-}
-.metric-lbl {
-  display: block;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  color: var(--text-2);
-  margin-top: 0.25rem;
-}
-
-.project-hover-arrow {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  color: var(--text-3);
-  transition: transform 0.3s var(--ease), color 0.3s;
-}
-.project-card:hover .project-hover-arrow {
-  transform: translate(3px, -3px);
-  color: var(--accent);
-}
-
 /* ============================================================
    FOOT
 ============================================================ */
@@ -748,14 +612,6 @@ img { display: block; max-width: 100%; }
 .foot-center a:hover,
 .foot-center a.active { color: var(--text); }
 
-
-/* ============================================================
-   KEYFRAMES
-============================================================ */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
 
 /* ============================================================
    RESPONSIVE
@@ -786,7 +642,7 @@ img { display: block; max-width: 100%; }
   .cell-img img { border-radius: 6px; }
   .bubble { left: 58px; font-size: 10px; padding: 6px 10px; }
 
-  .grid-row-section { padding-top: calc(4rem + 2 * 64px); }
+  .grid-row-section { padding: calc(4rem + 2 * 64px) 1.5rem 4rem; }
   .work { padding-left: 1.5rem; padding-right: 1.5rem; }
 
   .projects { grid-template-columns: 1fr; }
