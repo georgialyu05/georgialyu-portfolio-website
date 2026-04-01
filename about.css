@@ -4,7 +4,6 @@
   flex-direction: column;
   gap: 6rem;
   padding: calc(var(--nav-h) + 5rem) max(3rem, calc((100% - 936px) / 2)) 6rem;
-  
 }
 
 .about-header .section-header {
@@ -17,7 +16,6 @@
   font-weight: 400;
   line-height: 1.3;
 }
-
 
 /* ── Two-column layout ── */
 .about-selfintro {
@@ -72,7 +70,6 @@
   border-top: 1px solid rgba(0,0,0,0.12);
 }
 
-
 .about-text p {
   font-size: 1rem;
   color: var(--text-2);
@@ -86,21 +83,6 @@
   margin-bottom: 0;
 }
 
-.about-text a {
-  cursor: pointer;
-}
-
-.about-text .about-highlight {
-  color: var(--text-2);
-}
-
-.about-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 2rem;
-}
-
 .about-image {
   position: sticky;
   top: calc(var(--nav-h) + 2rem);
@@ -112,16 +94,6 @@
   object-fit: cover;
   border-radius: 12px;
   background: var(--bg-card);
-}
-
-.about-image-caption {
-  font-size: 0.75rem;
-  color: var(--text-3);
-  margin-top: 0.75rem;
-  text-align: center;
-  font-family: var(--ff-label);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 /* ── Responsive ── */
