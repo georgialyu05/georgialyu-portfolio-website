@@ -1,0 +1,154 @@
+/* ============================================================
+   ART PAGE
+============================================================ */
+.art-page {
+  background: var(--bg);
+}
+
+.art-main {
+  padding: calc(var(--nav-h) + 5rem) max(3rem, calc((100vw - 1296px) / 2)) 8rem;
+}
+
+/* HEADER */
+.art-header {
+  margin-bottom: 3rem;
+}
+.art-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+.art-desc {
+  font-size: 1rem;
+  color: var(--text-2);
+  font-weight: 300;
+}
+
+/* FILTER TABS */
+.art-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+.art-filter {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-3);
+  font-family: var(--ff-label);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 1rem;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.art-filter:hover {
+  border-color: var(--text-2);
+  color: var(--text-2);
+}
+.art-filter.active {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+
+/* GRID — masonry-like with CSS grid */
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Default item */
+.art-outline {
+  border: 1px solid #f3f3f3;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 0.5rem;
+}
+
+.art-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #f3f3f3;
+}
+
+/* Media fills the cell */
+.art-item-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 50%;
+  left: 50%;
+}
+.art-item-media iframe {
+  border: none;
+  display: block;
+  pointer-events: none;
+  transform-origin: center center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.art-item--interactive .art-item-media iframe {
+  pointer-events: auto;
+}
+.art-item--interactive .art-item-overlay {
+  display: none;
+}
+.art-item-media img,
+.art-item-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s var(--ease);
+}
+.art-item:hover .art-item-media img,
+.art-item:hover .art-item-media video {
+  transform: scale(1.04);
+}
+
+/* Overlay — appears on hover */
+.art-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.08) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+.art-item:hover .art-item-overlay {
+  opacity: 1;
+}
+.art-item-cat {
+  font-family: var(--ff-label);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.65);
+}
+.art-item-name {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 600px) {
+  .art-main { padding: calc(var(--nav-h) + 3rem) 1.5rem 5rem; }
+  .art-grid { grid-template-columns: 1fr; }
+}

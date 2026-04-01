@@ -1,0 +1,7 @@
+*.mp4
+*.mov
+*.webm
+public/
+grid-demo.css.bak
+grid-demo.html.bak
+grid-demo.js.bak
