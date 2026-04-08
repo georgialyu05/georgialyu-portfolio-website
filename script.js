@@ -86,11 +86,21 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 document.querySelectorAll('.project-card').forEach(card => {
   const video = card.querySelector('.project-hover-video');
   if (!video) return;
+
+  const showVideo = () => card.classList.add('video-ready');
+
   card.addEventListener('mouseenter', () => {
     video.currentTime = 0;
     video.play();
+    if (video.readyState >= 3) {
+      showVideo();
+    } else {
+      video.addEventListener('canplay', showVideo, { once: true });
+    }
   });
+
   card.addEventListener('mouseleave', () => {
+    card.classList.remove('video-ready');
     video.pause();
     video.currentTime = 0;
   });
