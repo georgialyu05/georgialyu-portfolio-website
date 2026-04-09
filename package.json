@@ -1,0 +1,23 @@
+{
+  "name": "georgialyu-portfolio-website",
+  "version": "1.0.0",
+  "description": "Georgia Lyu's Portfolio Website with Vercel Web Analytics",
+  "main": "art.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgialyu05/georgialyu-portfolio-website.git"
+  },
+  "keywords": ["portfolio", "design", "engineer"],
+  "author": "Georgia Lyu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgialyu05/georgialyu-portfolio-website/issues"
+  },
+  "homepage": "https://github.com/georgialyu05/georgialyu-portfolio-website#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
