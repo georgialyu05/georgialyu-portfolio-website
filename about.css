@@ -23,7 +23,7 @@
   grid-template-columns: 1fr 360px;
   gap: 4rem;
   align-items: start;
-  margin-top: -6rem;
+  margin-top: 0rem;
 }
 
 /* ── Single-column stacked layout ── */
